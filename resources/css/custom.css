@@ -35,3 +35,35 @@
         }
     }
 }
+
+/* dropdown submenu */
+
+.main-nav ul ul {
+    @apply hidden absolute bg-white shadow border border-gray-300 px-2 py-4;
+    top: 100%;
+    left: -24px;
+    z-index: 99999;
+    width: 180px;
+}
+
+.main-nav li {
+    position: relative;
+}
+
+.main-nav ul li:hover>ul {
+    display: block;
+}
+
+/* reset prose max width */
+
+.prose {
+    max-width: 100%;
+}
+
+/* cutom font */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+}

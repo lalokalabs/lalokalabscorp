@@ -40,5 +40,9 @@
 		"resolve-url-loader": "^3.1.2",
 		"tailwindcss": "^2.2.0",
 		"concurrently": "^6.2.1"
+	},
+	"dependencies": {
+		"@tailwindcss/forms": "^0.3.3",
+		"@tailwindcss/typography": "^0.4.1"
 	}
 }

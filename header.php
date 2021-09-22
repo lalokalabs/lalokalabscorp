@@ -11,16 +11,16 @@
 
 <body <?php body_class( 'bg-white text-gray-900 antialiased' ); ?>>
 
-<?php do_action( 'example_theme_site_before' ); ?>
+<?php do_action( 'lalokalabscorp_site_before' ); ?>
 
 <div id="page" class="min-h-screen flex flex-col">
 
-	<?php do_action( 'example_theme_header' ); ?>
+	<?php do_action( 'lalokalabscorp_header' ); ?>
 
-	<header>
+	<header class="primary-navigation">
 
-		<div class="mx-auto container">
-			<div class="lg:flex lg:justify-between lg:items-center border-b py-6">
+		<div class="border-b shadow-sm">
+			<div class="mx-auto container lg:flex lg:justify-between lg:items-center py-6">
 				<div class="flex justify-between items-center">
 					<div>
 						<?php if ( has_custom_logo() ) { ?>
@@ -31,10 +31,6 @@
 									<?php echo get_bloginfo( 'name' ); ?>
 								</a>
 							</div>
-
-							<p class="text-sm font-light text-gray-600">
-								<?php echo get_bloginfo( 'description' ); ?>
-							</p>
 
 						<?php } ?>
 					</div>
@@ -58,8 +54,8 @@
 				wp_nav_menu(
 					array(
 						'container_id'    => 'primary-menu',
-						'container_class' => 'hidden bg-gray-100 mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block',
-						'menu_class'      => 'lg:flex lg:-mx-4',
+						'container_class' => 'main-nav hidden bg-gray-100 mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block',
+						'menu_class'      => 'menu-wrapper2 lg:flex lg:-mx-4',
 						'theme_location'  => 'primary',
 						'li_class'        => 'lg:mx-4',
 						'fallback_cb'     => false,
@@ -72,22 +68,6 @@
 
 	<div id="content" class="site-content flex-grow">
 
-		<!-- Start introduction -->
-		<?php if ( is_front_page() ) : ?>
-			<div class="container mx-auto my-12 border-b pb-12">
-				<h1 class="font-bold text-lg text-secondary uppercase">TailPress</h1>
-				<h2 class="text-3xl lg:text-7xl tracking-tight font-extrabold my-4">Rapidly build your WordPress theme
-					with <a href="https://tailwindcss.com" class="text-primary">Tailwind CSS</a>.</h2>
-				<p class="max-w-screen-lg text-gray-700 text-lg font-medium mb-10">TailPress is your go-to starting
-					point for developing WordPress themes with TailwindCSS and comes with basic block-editor support out
-					of the box.</p>
-				<a href="https://github.com/jeffreyvr/tailpress"
-				   class="w-full sm:w-auto flex-none bg-gray-900 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200">View
-					on Github</a>
-			</div>
-		<?php endif; ?>
-		<!-- End introduction -->
-
-		<?php do_action( 'example_theme_content_start' ); ?>
+		<?php do_action( 'lalokalabscorp_content_start' ); ?>
 
 		<main>
