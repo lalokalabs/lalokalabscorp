@@ -21,3 +21,6 @@ Custom WP theme for Laloka Labs corporate site
 - Loco Translate
 - Polylang
 - Post Types Order
+
+Use WPCore Plugin Manager with this key `leKet1YturuNhqRuJyqB` to bulk install plugin
+
