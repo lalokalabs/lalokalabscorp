@@ -24,3 +24,4 @@ Custom WP theme for Laloka Labs corporate site
 
 Use WPCore Plugin Manager with this key `leKet1YturuNhqRuJyqB` to bulk install plugin
 
+https://wpcore.com/collections/leKet1YturuNhqRuJyqB
