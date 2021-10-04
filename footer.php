@@ -61,7 +61,7 @@
 							</svg>
 						</a>
 						<!-- linkedin -->
-						<a href="https://www.linkedin.com/company/laloka-labs/about/" class="ml-3 cursor-pointer hover:text-white">
+						<a href="https://www.linkedin.com/company/laloka-labs/" class="ml-3 cursor-pointer hover:text-white">
 							<svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
 								stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
 								<path stroke="none"
