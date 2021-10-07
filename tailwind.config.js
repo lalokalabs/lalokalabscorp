@@ -12,6 +12,28 @@ module.exports = {
             './resources/js/*.js',
             './safelist.txt'
         ],
+        options: {
+            safelist: [
+                'list-disc',
+                'list-decimal',
+                'm-2',
+                'm-4',
+                'm-6',
+                'm-8',
+                'mt-2',
+                'mt-4',
+                'mt-6',
+                'mt-8',
+                'mb-2',
+                'mb-4',
+                'mb-6',
+                'mb-8',
+                'my-2',
+                'my-4',
+                'my-6',
+                'my-8',
+            ],
+        },
     },
     theme: {
         container: {
