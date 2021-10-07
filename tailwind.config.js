@@ -14,6 +14,7 @@ module.exports = {
         ],
         options: {
             safelist: [
+                'list-inside',
                 'list-disc',
                 'list-decimal',
                 'm-2',
