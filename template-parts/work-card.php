@@ -1,20 +1,15 @@
-<div class="flex-1 mx-3">
-    <?php
-            
-        $post_thumbnail_url = get_template_directory_uri() . '/images/placeholder.png';
-
-        if (has_post_thumbnail()) {
-            $post_thumbnail_url = get_the_post_thumbnail_url($post_id, 'full');
-        }
-
-    ?>
-    <div class="inline-flex">
-        <img class="h-12" src="<?php echo $post_thumbnail_url ?>" alt="product thumbnail" />
-    </div>
-    <h4 class="font-semibold text-cool-gray-700">
-        <?php the_title(); ?>
-    </h4>
-    <div class="text-sm mt-1 text-cool-gray-500 mb-8 leading-6">
-        <?php the_excerpt(); ?>
+<div class="border shadow-sm rounded p-8" style="background-color: rgba(255, 255, 255, 0.85);">
+    <div class="flex flex-col">
+        <div class="mb-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" style="color: <?php echo $args['icon_color']; ?>;" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+        </div>
+        <h3 class="font-semibold text-base text-cool-gray-700 mb-2">
+            <?php the_title(); ?>
+        </h3>
+        <div class="text-sm text-cool-gray-600">
+            <?php the_excerpt(); ?>
+        </div>
     </div>
 </div>

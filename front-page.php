@@ -2,123 +2,149 @@
 
 <!-- hero section -->
 
-<?php get_template_part( 'template-parts/hero' ); ?>
+<section>
+	<div class="container mx-auto py-10 md:py-32 relative">
+
+		<!-- transparent logo -->
+		<svg class="absolute z-[-1] sm:top-0 right-0 w-56 md:w-[36rem]" id="レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2286.75 2204.69"><defs><style>.cls-1{opacity:0.2;}.cls-2{fill:#221714;}.cls-3{fill:#ff7129;}.cls-4{fill:#5364ff;}.cls-5{fill:#e00069;}</style></defs><g class="cls-1"><polygon class="cls-2" points="891.66 1207.04 891.36 1206.54 891.36 1207.54 891.37 1207.54 891.66 1207.04"/><polygon class="cls-2" points="891.66 1207.04 891.37 1207.54 891.8 1207.29 891.66 1207.04"/><polygon class="cls-2" points="1041.66 1357.84 1042.69 1357.24 1042.17 1356.95 1041.66 1357.84"/><polygon class="cls-2" points="891.37 1207.54 891.36 1207.54 891.36 1207.55 891.37 1207.54"/><circle class="cls-3" cx="1508.25" cy="750.22" r="77.8"/><circle class="cls-4" cx="583.59" cy="978.94" r="77.8"/><circle class="cls-5" cx="1273.31" cy="1663.81" r="77.8"/><path class="cls-4" d="M1030.48,1028.21l-24-36L801.18,636.79,641.75,360.64a102.66,102.66,0,0,0-140.23-37.58h0A102.65,102.65,0,0,0,464,463.29L801.18,1047.4l-2.83,2.65L216.76,1385.82a102.66,102.66,0,0,0-37.57,140.23h0a102.65,102.65,0,0,0,140.23,37.57L595.89,1404l355.59-205.3,43-23.66A102.64,102.64,0,0,0,1030.48,1028.21Z"/><path class="cls-5" d="M1931.7,1741.91h0a102.66,102.66,0,0,0-37.57-140.22l-673.76-389a102.65,102.65,0,0,0-140.23,37.57L691.14,1924a102.65,102.65,0,0,0,37.58,140.22h0a102.64,102.64,0,0,0,140.22-37.57l335-580.31,3.51-4.05,584,337.16A102.66,102.66,0,0,0,1931.7,1741.91Z"/><path class="cls-3" d="M1343.33,904.64V229.31a102.65,102.65,0,0,0-102.65-102.65h0A102.65,102.65,0,0,0,1138,229.31v778A102.65,102.65,0,0,0,1240.68,1110h778a102.65,102.65,0,0,0,102.65-102.65h0a102.65,102.65,0,0,0-102.65-102.66Z"/></g></svg>
+		<!-- end transparent logo -->
+
+		<div class="w-1/2 mb-16">
+			<h3 class="text-5xl text-cool-gray-700 font-bold mb-2"><span style="color: #ff8031;">T</span>he <span style="color: #e40074;">C</span>razy <span style="color: #6071ff;">L</span>abs</h3>
+			<div class="text-base font-medium text-cool-gray-600">
+				We build software to help people save time, money and make them happier human beings
+			</div>
+		</div>
+
+		<div class="flex flex-wrap justify-center -mb-8 -mx-4">
+
+			<?php 
+			            
+			$colors = ['#ff8031', '#e40074', '#6071ff'];
+			$available_colors = $colors;
+
+			?>
+
+			<?php
+				$work_query = new WP_Query( array( 'post_type' => 'lab_works')); 
+			?>
+
+			<?php if ( $work_query->have_posts() ) : ?>
+			<?php 
+				while ( $work_query->have_posts() ) :
+
+				if (empty($available_colors)) {
+					$available_colors = $colors;
+				}
+
+				$icon_color = array_shift($available_colors);
+
+				$work_query->the_post();
+			?>
+
+			<div class="w-full sm:w-1/2 md:w-1/3 mb-8 px-4">
+				<?php get_template_part( 'template-parts/work', 'card', ['icon_color' => $icon_color] ); ?>
+			</div>
+
+			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+			<?php endif; ?>
+
+		</div>
+
+	</div>
+</section>
 
 <!-- end hero section -->
 
-<!-- what we do section -->
-
-<div class="pb-1 text-center text-gray-700 bg-primary-10 bg-cover">
-	<div class="container relative max-w-2xl px-5 pt-12 mx-auto sm:py-12 lg:px-0">
-		<h2
-			class="mb-10 text-3xl font-semibold leading-10 tracking-tight text-left text-cool-gray-900 sm:text-5xl sm:leading-none md:text-3xl sm:text-center">
-			<?php _e( 'What we do', 'lalokalabscorp' ); ?>
-		</h2>
-		<p class="mt-5 text-cool-gray-500 text-xl text-left opacity-75 sm:text-center">
-			<?php _e( "Here are some cool things that we do at our lab.", 'lalokalabscorp' ); ?>
-		</p>
-	</div>
-	<div class="my-8">
-		<div class="container mx-auto mb-6 lg:mb-0">
-			<div class="flex flex-col -mx-3">
-				<div class="inline-flex flex-col sm:flex-row flex-1">
-					
-					<?php
-						$work_query = new WP_Query( array( 'post_type' => 'lab_works')); 
-					?>
-					
-					<?php if ( $work_query->have_posts() ) : ?>
-					<?php 
-						while ( $work_query->have_posts() ) :
-						$work_query->the_post();
-					?>
-					
-					<?php get_template_part( 'template-parts/work', 'card' ); ?>
-					
-					<?php endwhile; ?>
-					<?php wp_reset_postdata(); ?>
-					<?php endif; ?>
-					
-				</div>
-				
-			</div>
-		</div>
-		
-	</div>
-
-
-</div>
-
-<!-- end what we do section -->
-
 <!-- products section -->
-<div class="pb-1 text-center text-gray-700 bg-primary-900 bg-cover">
-	<div class="container relative max-w-2xl px-5 pt-12 mx-auto sm:py-12 lg:px-0">
-		<h2
-			class="mb-10 text-3xl font-semibold leading-10 tracking-tight text-left text-white sm:text-5xl sm:leading-none md:text-3xl sm:text-center">
-			<?php _e( 'Awesome Products', 'lalokalabscorp' ); ?>
-		</h2>
-		<p class="mt-5 text-white text-xl text-left opacity-75 sm:text-center">
-			<?php _e( "Here are some awesome products that we really think
-			you'll like.", 'lalokalabscorp' ); ?>
-		</p>
-	</div>
-	<div class="my-8">
-		<div class="max-w-xl px-4 mx-auto sm:px-6 lg:max-w-screen-xl lg:px-8">
-			<div class="lg:grid lg:grid-cols-3 lg:gap-8">
+<div class="bg-cool-purple-100">
 
-				<?php
+	<div class="container mx-auto py-10 sm:py-28">
+
+		<div class="mb-14 text-center">
+			<h2 class="mb-10 text-5xl font-bold">
+				<?php _e( 'Our Projects', 'lalokalabscorp' ); ?>
+			</h2>
+			<p class="text-cool-gray-600 font-medium">
+				<?php _e( "What we’re currently working on in the labs", 'lalokalabscorp' ); ?>
+			</p>
+
+		</div>
+
+		<div class="flex flex-wrap justify-center -mb-8 -mx-4">
+			<?php
 					$product_query = new WP_Query( array( 'post_type' => 'lab_products', 'posts_per_page' => 3, )); 
 				?>
 
-				<?php if ( $product_query->have_posts() ) : ?>
-				<?php 
+			<?php if ( $product_query->have_posts() ) : ?>
+			<?php 
 					while ( $product_query->have_posts() ) :
 					$product_query->the_post();
 				?>
 
+			<div class="w-full sm:w-1/2 md:w-1/3 mb-8 px-4">
+
 				<?php get_template_part( 'template-parts/product', 'card' ); ?>
 
-				<?php endwhile; ?>
-				<?php wp_reset_postdata(); ?>
-				<?php endif; ?>
-
 			</div>
+
+			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+			<?php endif; ?>
 		</div>
 	</div>
-
-
 </div>
 <!-- end products section -->
 
-<!-- latest from blog section -->
+<!-- team section -->
 
-<div class="py-12 bg-white">
-	<div class="container flex flex-col items-center justify-center px-4 pt-2 pb-8 mx-auto sm:px-6 lg:px-8">
+<section class="">
+	<div class="container mx-auto py-10 sm:py-28">
 
-		<h2
-			class="text-3xl font-extrabold leading-10 tracking-tight text-left text-gray-900 sm:text-5xl sm:leading-none md:text-3xl sm:text-center">
+		<h3 class="text-5xl font-bold text-cool-gray-700 mb-6">
+			<?php _e( 'Meet The Team', 'lalokalabscorp' ); ?>
+		</h3>
 
-			<span class="relative">
-				<?php _e( 'Latest from our Blog', 'lalokalabscorp' ); ?>
-			</span>
-		</h2>
+		<div class="text-base font-medium text-cool-gray-600 mb-10">
+			The Labmates are a remote-first team living and working for many years from different parts of the planet.
+			We
+			communicate, take responsibility for our own roles, and contribute to keeping a beautiful harmony among us.
+			Our glue is
+			our love for technology and its ability to empower.
+		</div>
 
+		<div class="flex flex-wrap -mb-8 -mx-4">
 
-		<div class="grid max-w-lg gap-5 mx-auto mt-12 md:grid-cols-2 lg:grid-cols-3 md:max-w-none">
-
-
-			<?php
-			   $recent_query = new WP_Query( array( 'post_type' => 'post', 'posts_per_page' => 3, )); 
-			?>
-
-			<?php if ( $recent_query->have_posts() ) : ?>
 			<?php 
-				while ( $recent_query->have_posts() ) :
-				$recent_query->the_post();
+			            
+			$position_colors = ['#ff8031', '#e40074', '#6071ff'];
+			$available_position_colors = $position_colors;
+
+			?>
+			
+			<?php
+				$labmate_query = new WP_Query( array( 'post_type' => 'lab_mates')); 
 			?>
 
-			<?php get_template_part( 'template-parts/content', 'card' ); ?>
+			<?php if ( $labmate_query->have_posts() ) : ?>
+			<?php 
+				while ( $labmate_query->have_posts() ) :
+
+				if (empty($available_position_colors)) {
+					$available_position_colors = $position_colors;
+				}
+
+				$position_color = array_shift($available_position_colors);
+
+				$labmate_query->the_post();
+			?>
+
+			<div class="w-full sm:w-1/2 md:w-1/3 mb-8 px-4">
+
+				<?php get_template_part( 'template-parts/team', 'card', ['position_color' => $position_color] ); ?>
+
+			</div>
 
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
@@ -126,9 +152,9 @@
 
 		</div>
 	</div>
-</div>
+</section>
 
-<!-- end latest from blog section -->
+<!-- end team section -->
 
 <?php
 get_footer();

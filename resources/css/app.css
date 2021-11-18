@@ -3,3 +3,25 @@
 @import "tailwindcss/utilities";
 
 @import "custom.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+div#primary-menu ul li a {
+    @apply text-sm text-cool-gray-600 font-medium;
+}
+
+div#primary-menu ul li.current-menu-item a {
+    @apply font-semibold text-cool-gray-700;
+}
+
+a.more-link {
+    display: none;
+}
+
+.prose {
+    @apply text-cool-gray-600;
+}

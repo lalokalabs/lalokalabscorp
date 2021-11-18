@@ -19,7 +19,7 @@
 
 	<header class="primary-navigation">
 
-		<div class="border-b shadow-sm">
+		<div class="border-b">
 			<div class="mx-auto container lg:flex lg:justify-between lg:items-center py-6">
 				<div class="flex justify-between items-center">
 					<div>
