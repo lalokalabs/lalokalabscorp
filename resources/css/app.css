@@ -56,3 +56,9 @@ a.more-link {
         @apply prose prose-lg;
     }
 }
+
+/* fix unorder list style with prose and block editor */
+
+.entry-content ul:not(.block-editor-block-variation-picker__variations) li {
+    list-style-type: none;
+}
