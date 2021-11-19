@@ -21,7 +21,7 @@
 	<hr class="border border-cool-gray-400 mt-8 mb-8">
 
 	<div class="entry-content">
-		<div class="prose sm:prose-sm lg:prose-lg xl:prose-xl">
+		<div class="prose sm:prose-sm lg:prose-lg">
 			<?php the_content(); ?>
 		</div>
 		
