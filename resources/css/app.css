@@ -56,9 +56,3 @@ a.more-link {
         @apply prose prose-lg;
     }
 }
-
-@screen xl {
-    .mec-single-event-description.mec-events-content {
-        @apply prose prose-xl;
-    }
-}
