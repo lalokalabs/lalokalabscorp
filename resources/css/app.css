@@ -25,3 +25,25 @@ a.more-link {
 .prose {
     @apply text-cool-gray-600;
 }
+
+.mec-single-event-description.mec-events-content {
+    @apply prose;
+}
+
+@screen sm {
+    .mec-single-event-description.mec-events-content {
+        @apply prose prose-sm;
+    }
+}
+
+@screen lg {
+    .mec-single-event-description.mec-events-content {
+        @apply prose prose-lg;
+    }
+}
+
+@screen xl {
+    .mec-single-event-description.mec-events-content {
+        @apply prose prose-xl;
+    }
+}

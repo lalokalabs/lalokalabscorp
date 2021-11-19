@@ -20,19 +20,19 @@
 	<header class="primary-navigation">
 
 		<div class="border-b">
-			<div class="mx-auto container lg:flex lg:justify-between lg:items-center py-6">
+			<div class="mx-auto container lg:flex lg:justify-between lg:items-center py-4">
 				<div class="flex justify-between items-center">
 					<div>
-						<?php if ( has_custom_logo() ) { ?>
-                            <?php the_custom_logo(); ?>
-						<?php } else { ?>
-							<div class="text-lg uppercase">
-								<a href="<?php echo get_bloginfo( 'url' ); ?>" class="font-extrabold text-lg uppercase">
-									<?php echo get_bloginfo( 'name' ); ?>
-								</a>
-							</div>
 
-						<?php } ?>
+						<?php
+							$logo_url = get_template_directory_uri() . '/images/labs-logo-2x.png';
+						?>
+
+						<a href="<?php echo get_bloginfo( 'url' ); ?>">
+							<img class="h-14" src="<?php echo $logo_url; ?>" alt="lalokalabs logo">
+						</a>
+
+						
 					</div>
 
 					<div class="lg:hidden">

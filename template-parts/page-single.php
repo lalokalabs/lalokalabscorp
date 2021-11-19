@@ -5,7 +5,7 @@
 	</header>
 
 	<div class="entry-content">
-		<div class="prose lg:prose-xl">
+		<div class="prose sm:prose-sm md:prose-md lg:prose-xl">
 			<?php the_content(); ?>
 		</div>
 		
