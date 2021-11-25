@@ -70,7 +70,7 @@ body {
 
 .mec-single-event-date,
 .mec-single-event-time {
-    @apply flex bg-white;
+    @apply flex items-center bg-white;
 }
 
 .mec-sl-calendar
@@ -86,7 +86,11 @@ body {
 
 .mec-date, 
 .mec-time {
-    @apply mr-10 font-semibold text-gray-500;
+    @apply mr-10 font-semibold text-cool-gray-500;
+}
+
+.mec-time-comment {
+    @apply mr-2 font-thin text-cool-gray-600 text-base;
 }
 
 .mec-events-abbr {
