@@ -24,9 +24,10 @@
 
         $events = MEC_main::get_shortcode_events($shortcode_id);
 
-        $desc_events = array_reverse($events);
+        if (!empty($events)) {
 
-        if (!empty($desc_events)) {
+            $desc_events = array_reverse($events);
+
             foreach ($desc_events as $key => $date_events) {
 
                 foreach ($date_events as $event) {
