@@ -94,7 +94,7 @@ body {
 }
 
 .mec-events-abbr {
-    @apply font-bold;
+    @apply font-bold uppercase;
 }
 
 .mec-event-social {
