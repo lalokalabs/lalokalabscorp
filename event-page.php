@@ -16,10 +16,10 @@
 
         <?php
 
-        $shortcode_id = get_option('event-skin-shortcode-id');
+        $shortcode_id = get_field('me_event_skin_shortcode');
 
         if (empty($shortcode_id)) {
-            var_dump("Please setup custom option event-skin-shortcode-id");
+            var_dump("Please setup ACF field me_event_skin_shortcode at event page");
         }
 
         $events = MEC_main::get_shortcode_events($shortcode_id);
