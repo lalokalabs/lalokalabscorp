@@ -34,7 +34,10 @@
 
                     $permalink = get_permalink($event->ID);
 
-                    $cover_image_url = $event->data->featured_image["thumblist"];
+                    /*
+                    thumbnail, thumblist, gridsquare, meccarouselthumb, medium, large, full, tileview
+                    */
+                    $cover_image_url = $event->data->featured_image["large"];
 
                     $excerpt = trim($event->data->post->post_excerpt) ? $event->data->post->post_excerpt : '';
 
