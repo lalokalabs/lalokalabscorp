@@ -30,7 +30,7 @@
                 $post_thumbnail_url = get_the_post_thumbnail_url($post_id, 'full');
             } ?>
 
-			<img class="object-cover w-full h-96 rounded" src="<?php echo $post_thumbnail_url ?>" alt="">
+			<img class="object-contain w-full rounded border" src="<?php echo $post_thumbnail_url ?>" alt="">
 
 			<div class="mb-10">
 				<h1 class="text-4xl font-bold my-8"><?php the_title(); ?></h1>

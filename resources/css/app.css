@@ -41,22 +41,6 @@ a.more-link {
     @apply text-cool-gray-600;
 }
 
-.mec-single-event-description.mec-events-content {
-    @apply prose;
-}
-
-@screen sm {
-    .mec-single-event-description.mec-events-content {
-        @apply prose prose-sm;
-    }
-}
-
-@screen lg {
-    .mec-single-event-description.mec-events-content {
-        @apply prose prose-lg;
-    }
-}
-
 /* fix unorder list style with prose and block editor */
 
 .entry-content ul:not(.block-editor-block-variation-picker__variations) li {
