@@ -1,4 +1,4 @@
-<div class="p-8 border shadow-sm h-full">
+<div class="p-7 border shadow-sm h-full rounded">
     <div class="flex">
         <div>
             <?php
@@ -12,14 +12,14 @@
             ?>
             <img class="object-cover w-full h-24" src="<?php echo $post_thumbnail_url ?>" alt="">
         </div>
-        <div class="pl-4 flex flex-col">
-            <div class="text-sm font-semibold" style="color: <?php echo $args['position_color']; ?>;">
+        <div class="pl-3 flex flex-col">
+            <div class="text-sm font-medium mb-1" style="color: <?php echo $args['position_color']; ?>;">
                 <?php the_field('lab_position'); ?>
             </div>
-            <div class="flex-1 text-xl font-semibold text-cool-gray-700">
+            <div class="flex-1 text-lg font-semibold text-cool-gray-700 leading-5">
                 <?php the_title(); ?>
             </div>
-            <div>
+            <div class="mb-1">
                 <!-- linkedin -->
                 <a href="<?php the_field('linkedin_url'); ?>" class="hover:text-cool-gray-600 text-cool-gray-500">
                     <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"

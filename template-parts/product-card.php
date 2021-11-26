@@ -11,14 +11,14 @@
     <img class="object-cover w-full h-56" src="<?php echo $post_thumbnail_url; ?>" alt="">
     <div class="flex-1 flex flex-col p-6 bg-white">
         <h3 class="text-cool-gray-700 text-2xl font-semibold"><?php the_title(); ?></h3>
-        <h4 class="text-cool-gray-700 text-sm font-medium mb-4"><?php the_field('product_tagline'); ?>Fast and simple OTP flow</h4>
+        <h4 class="text-cool-gray-700 text-sm font-medium mb-4"><?php the_field('product_tagline'); ?>Fast and Simple OTP flow</h4>
 
         <div class="flex-1 font-medium text-xsm text-cool-gray-600">
             <?php the_excerpt(); ?>
         </div>
 
         <div class="mt-6">
-            <a class="block bg-cool-purple-500 w-full text-center rounded-md text-sm font-medium py-2 text-white"
+            <a class="block bg-cool-purple-500 w-full text-center rounded-md text-sm font-semibold py-3 text-white"
                 href="<?php the_field('product_url'); ?>"><?php _e( 'Learn More', 'lalokalabscorp' ); ?></a>
         </div>
     </div>
