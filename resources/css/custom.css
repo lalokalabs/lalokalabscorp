@@ -13,11 +13,7 @@
 
     p, ul, ol {
         a {
-            @apply text-blue-500 underline;
-
-            &:hover {
-                @apply no-underline;
-            }
+            @apply text-primary-500 hover:text-primary-500 hover:underline focus:outline-none;
         }
 
         @apply mb-8;
@@ -60,9 +56,17 @@
     max-width: 100%;
 }
 
+/* cutom font */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
 .mec-single-event-date,
 .mec-single-event-time {
-    @apply flex items-center bg-white;
+    @apply flex bg-white;
 }
 
 .mec-sl-calendar
@@ -78,19 +82,11 @@
 
 .mec-date, 
 .mec-time {
-    @apply min-w-[4rem] font-semibold text-cool-gray-500;
-}
-
-.mec-time-comment {
-    @apply mr-2 font-thin text-cool-gray-500 text-base;
-}
-
-.mec-time-comment:empty {
-    @apply mr-0;
+    @apply mr-10 font-semibold text-gray-500;
 }
 
 .mec-events-abbr {
-    @apply font-bold uppercase;
+    @apply font-bold;
 }
 
 .mec-event-social {
@@ -131,10 +127,5 @@
     @apply inline-flex items-center justify-center border rounded-full;
     width: 40px;
     height: 40px;
-}
-
-.event-form {
-    @apply p-6 rounded shadow-md;
-    border: solid 1px #190042;
 }
 

@@ -5,7 +5,7 @@
 	<!-- categories -->
 	<div style="background-color: #f3f5fd;" class="py-4">
 
-		<div class="container mx-auto">
+		<div class="container mx-auto px-4 lg:px-14">
 
 		<?php
 			$category_name = get_query_var('category_name');
@@ -42,7 +42,7 @@
 
 	<!-- post list -->
 
-	<div class="container mx-auto flex pt-12 pb-20">
+	<div class="container mx-auto flex pt-12 pb-20 px-4 lg:px-14">
 
 		<div class="flex flex-wrap -mb-16 -mx-4">
 			<?php if ( have_posts() ) : ?>
@@ -51,7 +51,7 @@
 					the_post();
 					?>
 
-					<div class="w-full sm:w-1/3 mb-16 px-4">
+					<div class="w-full sm:w-1/2 lg:w-1/3 mb-16 px-4">
 
 					<?php get_template_part( 'template-parts/content', 'card' ); ?>
 

@@ -18,7 +18,7 @@
 	<?php do_action( 'lalokalabscorp_header' ); ?>
 
 	<header class="primary-navigation border-b">
-		<div class="mx-auto container lg:flex lg:justify-between lg:items-center p-4">
+		<div class="mx-auto container lg:flex lg:justify-between lg:items-center px-4 lg:px-14 py-3">
 			<div class="flex justify-between items-center">
 				<div>
 
@@ -30,6 +30,7 @@
 						<img class="h-14 -ml-3" src="<?php echo $logo_url; ?>" alt="lalokalabs logo">
 					</a>
 
+					
 				</div>
 
 				<div class="lg:hidden">
@@ -51,10 +52,10 @@
 			wp_nav_menu(
 				array(
 					'container_id'    => 'primary-menu',
-					'container_class' => 'main-nav hidden bg-gray-50 mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block',
+					'container_class' => 'main-nav hidden bg-gray-100 mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block',
 					'menu_class'      => 'menu-wrapper2 lg:flex lg:-mx-4',
 					'theme_location'  => 'primary',
-					'li_class'        => 'mb-2 sm:mb-0 lg:mx-4',
+					'li_class'        => 'lg:mx-4',
 					'fallback_cb'     => false,
 				)
 			);

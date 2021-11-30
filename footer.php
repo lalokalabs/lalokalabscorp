@@ -9,7 +9,7 @@
 <!-- simple footer -->
 
 <footer class="text-white bg-cool-gray-900">
-	<div class="container px-4 mx-auto flex flex-col sm:flex-row items-center py-10">
+	<div class="container px-4 lg:px-14 mx-auto flex flex-col sm:flex-row items-center py-10">
 		<!-- company info -->
 		<div class="w-72 border-cool-gray-600 border-t sm:border-t-0 sm:border-r sm:pr-10 order-last sm:order-first mt-8 sm:mt-0 pt-4 sm:pt-0">
 			<div class="text-center md:text-left">

@@ -13,10 +13,10 @@
             <img class="object-cover w-full h-24" src="<?php echo $post_thumbnail_url ?>" alt="">
         </div>
         <div class="pl-3 flex flex-col">
-            <div class="text-sm font-medium mb-1" style="color: <?php echo $args['position_color']; ?>;">
+            <div class="text-sm font-medium mt-1 mb-1.5 leading-4" style="color: <?php echo $args['position_color']; ?>;">
                 <?php the_field('lab_position'); ?>
             </div>
-            <div class="flex-1 text-lg font-semibold text-cool-gray-700 leading-5">
+            <div class="flex-1 text-base font-semibold text-cool-gray-700 leading-5">
                 <?php the_title(); ?>
             </div>
             <div class="mb-1">
