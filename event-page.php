@@ -8,11 +8,11 @@
     https://webnus.net/dox/modern-events-calendar/overriding-mec-shortcodes-skin/
  -->
 
-<div class="container mx-auto py-12">
+<div class="container mx-auto py-12 px-4 lg:px-14">
 
-    <h2 class="mb-10 text-5xl font-bold"><?php _e( 'Events', 'lalokalabscorp' ); ?></h2>
+    <h2 class="mb-8 text-3xl font-bold"><?php _e( 'Events', 'lalokalabscorp' ); ?></h2>
 
-    <div class="flex flex-row flex-wrap justify-center -mb-8 -mx-4">
+    <div class="flex flex-row flex-wrap -mb-8 -mx-4">
 
         <?php
 
@@ -61,8 +61,8 @@
                     }
             ?>
 
-            <div class="w-full sm:w-1/2 md:w-1/3 mb-8 px-4">
-                <div class="h-full flex flex-col rounded-lg shadow-sm border overflow-hidden">
+            <div class="w-full md:w-1/2 lg:w-1/3 mb-12 px-4">
+                <div class="h-full flex flex-col rounded-lg shadow border overflow-hidden">
                     <?php
                         
                     $default_cover_url = get_template_directory_uri() . '/images/placeholder.png';
@@ -73,24 +73,22 @@
 
                     ?>
                     <div class="relative">
-                        <img class="object-cover w-full h-56" src="<?php echo $cover_image_url; ?>" alt="">
-
-                        <!-- expired label -->
-
+                        <!-- expired image&label -->
                         <?php if ($expired) { ?>
+                        <img class="object-cover w-full h-56 filter grayscale" src="<?php echo $cover_image_url; ?>" alt="">
 
-                        <div class="absolute top-0 right-0 bg-red-500 text-white font-medium py-1 px-2 shadow-lg">
+                        <div class="absolute top-0 right-0 bg-red-600 text-white font-semibold py-1.5 px-2.5 shadow-lg rounded-bl text-sm">
                             Expired
                         </div>
 
                         <?php } ?>
                         <!-- end expired label -->
 
-                        <!-- upcoming label -->
-
+                        <!-- upcoming image&label -->
                         <?php if (!$expired) { ?>
+                        <img class="object-cover w-full h-56" src="<?php echo $cover_image_url; ?>" alt="">
 
-                        <div class="absolute top-0 right-0 bg-cool-purple-500 text-white font-medium py-1 px-2 shadow-lg">
+                        <div class="absolute top-0 right-0 bg-primary-300 text-white font-semibold py-1.5 px-2.5 shadow-lg rounded-bl text-sm">
                             Upcoming
                         </div>
 
@@ -99,42 +97,36 @@
                     </div>
                     
                     <div class="flex-1 flex flex-col p-6 bg-white">
-                        <a href="<?php echo $permalink; ?>" class="text-cool-gray-700 hover:text-cool-gray-800 text-2xl font-semibold"><?php echo $event->data->title; ?></a>
+                        <h3 class="text-cool-gray-700 text-xl font-bold leading-snug"><?php echo $event->data->title; ?></h3>
 
-                        <div class="mt-4 flex-1 font-medium text-xsm text-cool-gray-600">
-                            <?php echo $excerpt; ?> ...
-                        </div>
-
-                        <div class="mt-6">
-
-                            <div class="flex items-center justify-between mb-6">
-                                <div class="flex items-center">
-                                    <div class="mr-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-cool-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                        </svg>
-                                    </div>
-                                    
-                                    <div class="font-medium text-lg">
-                                        <?php echo date_i18n('M j, Y', strtotime($event_start_date)); ?>
-                                    </div>
+                        <div class="mt-4 mb-6 flex flex-col space-y-2 flex-1 ">
+                            <div class="flex items-center">
+                                <div class="mr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-cool-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
                                 </div>
-
-                                <div class="flex items-center">
-                                    <div class="mr-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-cool-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                        </svg>
-                                    </div>
-                                    <div class="uppercase text-lg font-extralight">
-                                        <?php echo $start_time; ?> <?php if (!empty($end_time)) { ?> - <?php echo $end_time; ?> <?php } ?>
-                                    </div>
+                                
+                                <div class="font-medium text-sm text-gray-600">
+                                    <?php echo date_i18n('M j, Y', strtotime($event_start_date)); ?>
                                 </div>
                             </div>
 
-                            <a class="block bg-cool-purple-500 w-full text-center rounded-md text-sm font-medium py-2 text-white"
-                                href="<?php echo $permalink; ?>"><?php _e( 'View Detail', 'lalokalabscorp' ); ?></a>
+                            <div class="flex items-center">
+                                <div class="mr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-cool-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <div class="uppercase font-medium text-sm text-gray-600">
+                                    <?php echo $start_time; ?> <?php if (!empty($end_time)) { ?> - <?php echo $end_time; ?> <?php } ?>
+                                </div>
+                            </div>
                         </div>
+
+                        <a class="block bg-primary-300 hover:bg-primary-500 w-full text-center rounded-md text-sm font-semibold py-3 text-white"
+                            href="<?php echo $permalink; ?>"><?php _e( 'View Detail >', 'lalokalabscorp' ); ?>
+                        </a>
                     </div>
                 </div>
             </div>
