@@ -192,3 +192,11 @@ body {
     display: block;
     font-size: 12px;
 }
+
+#cookie-law-info-bar {
+    border-top: 1px solid #cbd3e9;
+}
+
+.cli-tab-footer .wt-cli-privacy-accept-btn {
+    background: #320291;
+}
