@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<div class="container mx-auto my-8">
+	<div class="container mx-auto my-10 md:my-14 px-4 lg:px-14 pb-12">
 
 	<?php if ( have_posts() ) : ?>
 

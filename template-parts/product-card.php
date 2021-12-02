@@ -18,8 +18,8 @@
         </div>
 
         <div class="mt-6">
-            <a class="block bg-cool-purple-500 w-full text-center rounded-md text-sm font-semibold py-3 text-white"
-                href="<?php the_field('product_url'); ?>"><?php _e( 'Learn More', 'lalokalabscorp' ); ?></a>
+            <a class="block bg-primary-300 hover:bg-primary-500 w-full text-center rounded-md text-sm font-semibold py-3 text-white"
+                href="<?php the_field('product_url'); ?>"><?php _e( 'Learn More >', 'lalokalabscorp' ); ?></a>
         </div>
     </div>
 </div>

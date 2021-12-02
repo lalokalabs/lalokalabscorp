@@ -9,16 +9,18 @@
     } 
     
     ?>
-    <img class="object-cover w-full h-56 rounded border" src="<?php echo $post_thumbnail_url ?>" alt="">
+    <a href="<?php echo get_permalink() ?>">
+        <img class="object-cover w-full h-56 rounded border" src="<?php echo $post_thumbnail_url ?>" alt="">
+    </a>
     
     <!-- categories and date -->
-    <div class="flex items-center justify-between text-sm my-4">
+    <div class="flex items-center justify-between text-sm mt-5 mb-4">
 
         <div>
             <?php 
                 $categories = get_the_category();
                 foreach ($categories as $category) {
-                    $category_link = get_category_link( $category );	
+                    $category_link = get_category_link( $category );
             ?>
 
             <a href="<?php echo esc_url( $category_link ); ?>" class="inline-block">
@@ -28,24 +30,16 @@
             <?php } ?>
         </div>
 
-        <span class="text-cool-gray-500"><?php echo get_the_date(); ?></span>
+        <span class="text-cool-gray-600 text-xs"><?php echo get_the_date(); ?></span>
     </div>
     <!-- end categories -->
 
-    <a href="<?php echo get_permalink() ?>" class="block text-xl font-bold hover:underline mb-4">
+    <a href="<?php echo get_permalink() ?>" class="block text-xl font-bold hover:underline mb-2.5">
         <?php the_title(); ?>
     </a>
 
-    <div class="flex-1 text-sm text-cool-gray-600 mb-4">
+    <div class="flex-1 text-sm text-cool-gray-600 mb-4 leading-normal">
         <?php the_excerpt(); ?>
     </div>
-
-    <!-- card action -->
-    <div>
-        <a href="<?php echo get_permalink() ?>" class="block text-cool-purple-700 text-sm font-semibold uppercase">
-            Read More >
-        </a>
-    </div>
-    <!-- end card action -->
 
 </div>
