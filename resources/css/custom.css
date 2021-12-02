@@ -88,10 +88,11 @@ body {
 
 .mec-date, 
 .mec-time {
-    @apply mr-5 font-semibold text-gray-500;
+    @apply mr-5 font-semibold text-cool-gray-600;
 }
 
 .mec-time-comment {
+    @apply text-cool-gray-600;
     top: -5px;
     left: 105px;
     position: absolute;
