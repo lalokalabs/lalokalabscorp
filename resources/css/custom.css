@@ -66,27 +66,39 @@ body {
 
 .mec-single-event-date,
 .mec-single-event-time {
-    @apply flex bg-white;
+    @apply flex bg-white items-center;
+    padding: 10px 14px;
 }
 
-.mec-sl-calendar
-{
-    @apply mr-4;
+.mec-single-event-time {
+    margin-bottom: 0;
+}
+
+.mec-sl-calendar{
+    @apply mr-3;
     color: #ff8031;
+    font-weight: 900;
 }
 
 .mec-sl-clock {
-    @apply mr-4;
+    @apply mr-3;
     color: #e6006b;
+    font-weight: 900;
 }
 
 .mec-date, 
 .mec-time {
-    @apply mr-10 font-semibold text-gray-500;
+    @apply mr-5 font-semibold text-gray-500;
+}
+
+.mec-time-comment {
+    top: -5px;
+    left: 105px;
+    position: absolute;
 }
 
 .mec-events-abbr {
-    @apply font-bold;
+    @apply font-semibold;
 }
 
 .mec-event-social {
@@ -129,3 +141,53 @@ body {
     height: 40px;
 }
 
+.mec-single-event .mec-events-meta-group-countdown {
+    border-radius: .25rem;
+}
+
+.mec-events-meta-group-countdown .countdown-w {
+    padding: 1.5rem 0 1.75rem;
+    color: #a8a8a8;
+    border-radius: .25rem;
+}
+
+.mec-events-button {
+    font-weight: 500;
+    border-radius: 0.25rem;
+}
+
+.mec-border-color, .mec-border-color-hover:hover, .mec-wrap .mec-border-color, .mec-wrap .mec-border-color-hover:hover {
+    color: #01b9db;
+}
+
+.mec-color, .mec-color-before :before, .mec-color-hover:hover, .mec-wrap .mec-color, .mec-wrap .mec-color-before :before, .mec-wrap .mec-color-hover:hover {
+    color: #01b9db;
+}
+
+.mec-single-event .mec-events-meta-group-booking, .mec-single-event .mec-frontbox {
+    border: none;
+    padding: 0.25rem 0 0;
+    box-shadow: none;
+}
+
+.mec-event-meta i:before {
+    font-size: 18px;
+}
+
+.mec-single-event .mec-event-export-module.mec-frontbox .mec-event-exporting .mec-export-details ul li {
+    width: 100%;
+    min-height: 40px;
+    margin-bottom: 15px;
+    text-align: center;
+    float: none;
+    display: block;
+}
+
+.mec-single-event .mec-event-export-module.mec-frontbox .mec-event-exporting .mec-export-details ul li a {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    display: block;
+    font-size: 12px;
+}

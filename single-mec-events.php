@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<div class="container mx-auto my-8 flex flex-col lg:flex-row">
+	<div class="container mx-auto my-10 md:my-14 pb-12 md:pb-8 flex flex-col lg:flex-row px-4 lg:px-14">
 
 	<?php
 	
@@ -12,7 +12,7 @@
 	
 	?>
 
-	<div class="w-full lg:w-2/3">
+	<div class="w-full lg:w-3/5 xl:w-2/3">
 
 	<?php if ( have_posts() ) : ?>
 
@@ -35,16 +35,14 @@
 			<div class="mb-10">
 				<h1 class="text-4xl font-bold my-8"><?php the_title(); ?></h1>
 
-				<div class="prose sm:prose-sm lg:prose-lg">
+				<div class="prose">
 					<?php the_content(); ?>
 				</div>
 			</div>
 
 			<div class="mec-single-event">
 
-				<?php 
-					echo $single->display_export_widget($single_event_obj);
-				?>
+				
 				
 				<?php echo $single->display_countdown_widget($single_event_main); ?>
 				
@@ -64,7 +62,7 @@
 
 	</div>
 
-	<div class="w-full lg:w-1/3 pl-0 lg:pl-6">
+	<div class="w-full lg:w-2/5 xl:w-1/3 pl-0 lg:pl-6">
 
 	<!-- date widget -->
 
@@ -75,8 +73,9 @@
 
 	
 	<?php echo $single->display_social_widget($single_event_obj); ?>
-
-	
+	<div class="mec-single-event">
+	<?php echo $single->display_export_widget($single_event_obj); ?>
+</div>
 	<!-- end date widget -->
 
 	</div>
