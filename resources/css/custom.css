@@ -13,11 +13,7 @@
 
     p, ul, ol {
         a {
-            @apply text-blue-500 underline;
-
-            &:hover {
-                @apply no-underline;
-            }
+            @apply text-primary-500 hover:text-primary-500 hover:underline focus:outline-none;
         }
 
         @apply mb-8;
@@ -66,4 +62,141 @@
 
 body {
     font-family: "Poppins", sans-serif;
+}
+
+.mec-single-event-date,
+.mec-single-event-time {
+    @apply flex bg-white items-center;
+    padding: 10px 14px;
+}
+
+.mec-single-event-time {
+    margin-bottom: 0;
+}
+
+.mec-sl-calendar{
+    @apply mr-3;
+    color: #ff8031;
+    font-weight: 900;
+}
+
+.mec-sl-clock {
+    @apply mr-3;
+    color: #e6006b;
+    font-weight: 900;
+}
+
+.mec-date, 
+.mec-time {
+    @apply mr-5 font-semibold text-cool-gray-600;
+}
+
+.mec-time-comment {
+    @apply text-cool-gray-600;
+    top: -5px;
+    left: 105px;
+    position: absolute;
+}
+
+.mec-events-abbr {
+    @apply font-semibold;
+}
+
+.mec-event-social {
+    @apply bg-white border shadow-sm rounded p-6 mt-6 text-center;
+}
+
+.mec-social-single.mec-frontbox-title {
+    @apply font-semibold text-base mb-6;
+}
+
+.mec-links-details ul {
+    @apply flex justify-center space-x-6;
+}
+
+.mec-event-social-icon a.facebook {
+    color: #29428f;
+    @apply inline-flex items-center justify-center border rounded-full;
+    width: 40px;
+    height: 40px;
+}
+
+.mec-event-social-icon a.twitter {
+    color: #3caafc;
+    @apply inline-flex items-center justify-center border rounded-full;
+    width: 40px;
+    height: 40px;
+}
+
+.mec-event-social-icon a.linkedin {
+    color: #4e587b;
+    @apply inline-flex items-center justify-center border rounded-full;
+    width: 40px;
+    height: 40px;
+}
+
+.mec-event-social-icon a.email {
+    color: #ff5f5f;
+    @apply inline-flex items-center justify-center border rounded-full;
+    width: 40px;
+    height: 40px;
+}
+
+.mec-single-event .mec-events-meta-group-countdown {
+    border-radius: .25rem;
+}
+
+.mec-events-meta-group-countdown .countdown-w {
+    padding: 1.5rem 0 1.75rem;
+    color: #a8a8a8;
+    border-radius: .25rem;
+}
+
+.mec-events-button {
+    font-weight: 500;
+    border-radius: 0.25rem;
+}
+
+.mec-border-color, .mec-border-color-hover:hover, .mec-wrap .mec-border-color, .mec-wrap .mec-border-color-hover:hover {
+    color: #01b9db;
+}
+
+.mec-color, .mec-color-before :before, .mec-color-hover:hover, .mec-wrap .mec-color, .mec-wrap .mec-color-before :before, .mec-wrap .mec-color-hover:hover {
+    color: #01b9db;
+}
+
+.mec-single-event .mec-events-meta-group-booking, .mec-single-event .mec-frontbox {
+    border: none;
+    padding: 0.25rem 0 0;
+    box-shadow: none;
+}
+
+.mec-event-meta i:before {
+    font-size: 18px;
+}
+
+.mec-single-event .mec-event-export-module.mec-frontbox .mec-event-exporting .mec-export-details ul li {
+    width: 100%;
+    min-height: 40px;
+    margin-bottom: 15px;
+    text-align: center;
+    float: none;
+    display: block;
+}
+
+.mec-single-event .mec-event-export-module.mec-frontbox .mec-event-exporting .mec-export-details ul li a {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    display: block;
+    font-size: 12px;
+}
+
+#cookie-law-info-bar {
+    border-top: 1px solid #cbd3e9;
+}
+
+.cli-tab-footer .wt-cli-privacy-accept-btn {
+    background: #320291;
 }

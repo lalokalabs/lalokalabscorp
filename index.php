@@ -1,33 +1,72 @@
 <?php get_header(); ?>
 
-<div class="container mx-auto flex my-8">
+<section>
 
-	<div class="flex-1">
+	<!-- categories -->
+	<div style="background-color: #f3f5fd;" class="py-4">
 
-		<?php if ( have_posts() ) : ?>
-			<?php
-			while ( have_posts() ) :
-				the_post();
-				?>
+		<div class="container mx-auto px-4 lg:px-14">
 
-				<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+		<?php
+			$category_name = get_query_var('category_name');
+			$all_class = '';
 
-			<?php endwhile; ?>
+			if (empty($category_name)) {
+				$all_class = 'bg-purple-800 text-white';
+			}
+ 		?>
 
-		<?php endif; ?>
+		<a href="<?php echo get_post_type_archive_link( 'post' ); ?>" class="inline-block text-sm font-medium hover:bg-purple-800 hover:text-white rounded-full py-1 px-4 mr-4 <?php echo $all_class; ?>">
+            All
+        </a>
+
+		<?php $categories = get_categories();
+
+		foreach ($categories as $category) { 
+			$category_link = get_category_link( $category );
+
+			$category_class = '';
+			
+			if ($category_name == $category->slug) {
+				$category_class = 'bg-purple-800 text-white';
+			}
+		?>
+			<a href="<?php echo esc_url( $category_link ); ?>" class="inline-block text-sm font-medium hover:bg-purple-800 hover:text-white rounded-full py-1 px-4 mr-4 <?php echo $category_class; ?>">
+                <?php echo $category->name; ?>
+            </a>
+		<?php } ?>
+
+		</div>
+	</div>
+	<!-- end categories -->
+
+	<!-- post list -->
+
+	<div class="container mx-auto flex pt-12 pb-20 px-4 lg:px-14">
+
+		<div class="flex flex-wrap -mb-16 -mx-4">
+			<?php if ( have_posts() ) : ?>
+				<?php
+				while ( have_posts() ) :
+					the_post();
+					?>
+
+					<div class="w-full sm:w-1/2 lg:w-1/3 mb-16 px-4">
+
+					<?php get_template_part( 'template-parts/content', 'card' ); ?>
+
+					</div>
+
+				<?php endwhile; ?>
+
+			<?php endif; ?>
+		</div>
 
 	</div>
 
-	<div class="border bg-gray-100 w-56 lg:w-96 ml-10">
-
-		<?php if ( is_active_sidebar( 'blog_sidebar' ) ) : ?>
-			<div id="secondary" class="flex flex-col space-y-4 p-4" role="complementary">
-			<?php dynamic_sidebar( 'blog_sidebar' ); ?>
-			</div>
-		<?php endif; ?>
-	</div>
-
-</div>
+	<!-- end post list -->
+	
+</section>
 
 <?php
 get_footer();
