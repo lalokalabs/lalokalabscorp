@@ -60,7 +60,7 @@
 <!-- end hero section -->
 
 <!-- products section -->
-<div class="bg-cool-purple-100">
+<div class="bg-cool-purple-200">
 
 	<div class="container px-4 lg:px-14 mx-auto py-20 md:py-24">
 
@@ -74,7 +74,7 @@
 
 		</div>
 
-		<div class="flex flex-col md:flex-row justify-center items-center md:space-x-8 space-y-5 md:space-y-0">
+		<div class="flex flex-row flex-wrap justify-center lg:space-x-8 space-y-8 lg:space-y-0 lg:mb-8">
 			<?php
 					$product_query = new WP_Query( array( 'post_type' => 'lab_products', 'posts_per_page' => 3, )); 
 				?>

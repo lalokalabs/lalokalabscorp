@@ -1,4 +1,4 @@
-<div class="h-full flex flex-col rounded-lg shadow-sm border overflow-hidden">
+<div class="h-full flex flex-col rounded-lg shadow border overflow-hidden bg-white">
     <?php
 
     $post_id = get_the_ID();
@@ -10,10 +10,10 @@
     }
 
     ?>
-    <img class="object-cover w-full h-56" src="<?php echo $post_thumbnail_url; ?>" alt="">
+    <img class="object-cover w-full pt-3 pb-2 border-b" src="<?php echo $post_thumbnail_url; ?>" alt="">
     <div class="flex-1 flex flex-col p-6 bg-white">
-        <h3 class="text-cool-gray-700 text-2xl font-semibold"><?php the_title(); ?></h3>
-        <h4 class="text-cool-gray-700 text-sm font-medium mb-4"><?php the_field('product_tagline'); ?>Fast and Simple OTP flow</h4>
+        <h3 class="text-cool-gray-700 text-2xl font-semibold mb-0.5"><?php the_title(); ?></h3>
+        <h4 class="text-cool-gray-700 text-sm font-medium mb-4"><?php the_field('product_tagline'); ?></h4>
 
         <div class="flex-1 font-medium text-xsm text-cool-gray-600">
             <?php the_excerpt(); ?>

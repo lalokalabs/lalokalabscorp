@@ -65,10 +65,6 @@ a.more-link {
     @apply no-underline;
 }
 
-.prose h2 {
-    @apply font-semibold text-cool-gray-900;
-}
-
 .prose p.my-0 {
     @apply my-0;
 }
@@ -77,4 +73,8 @@ a.more-link {
 
 .entry-content ul:not(.block-editor-block-variation-picker__variations) li {
     list-style-type: none;
+}
+
+.entry-content .prose ol>li::marker {
+    content: "";
 }
