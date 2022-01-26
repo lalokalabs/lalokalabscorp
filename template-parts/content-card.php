@@ -2,6 +2,8 @@
 
     <?php
 
+    $post_id = get_the_ID();
+
     $post_thumbnail_url = get_template_directory_uri() . '/images/placeholder.png';
 
     if (has_post_thumbnail()) {

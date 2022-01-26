@@ -27,6 +27,23 @@
 			<?php the_content(); ?>
 		</div>
 		
+		<!-- tags -->
+        <div class="mt-14 bg-[#f3f5fd] px-6 py-4 rounded">
+          <p class="inline font-medium text-primary-700">Tags :</p>
+          <?php
+
+			$tags = get_the_tags();
+			
+            if (!empty($tags)) {
+                foreach ($tags as $tag) {
+                    $tag_link = get_tag_link($tag); ?>
+          		<a href="<?php echo esc_url($tag_link); ?>" class="btn-secondary btn-sm btn mx-1 font-medium"><?php echo $tag->name; ?></a>
+          <?php
+                }
+            } ?>
+        </div>
+		<!-- end tags -->
+		
 		<div class="entry-navigation">
 			<?php
 				wp_link_pages(
