@@ -1,5 +1,7 @@
 <div class="h-full flex flex-col rounded-lg shadow-sm border overflow-hidden">
     <?php
+
+    $post_id = get_the_ID();
         
     $post_thumbnail_url = get_template_directory_uri() . '/images/placeholder.png';
 
