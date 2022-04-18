@@ -220,12 +220,24 @@ body {
 /* wp job opening style */
 
 #awsm-application-submit-btn {
-    @apply px-3 py-1 text-white focus:outline-none rounded font-medium hover:cursor-pointer;
+    @apply px-6 py-2 text-white focus:outline-none rounded font-medium hover:cursor-pointer;
     background-color: #17A8E3;
 }
 
 .single-awsm_job_openings .post-tags-container {
     @apply hidden;
+}
+
+.awsm_job_openings .entry-header .entry-header-meta {
+    @apply hidden;
+}
+
+.awsm-job-form h2 {
+    margin: .5rem 0 2rem;
+}
+
+.awsm-job-form .awsm-job-form-group label {
+    font-weight: 500;
 }
 
 .prose .awsm-selectric-scroll  ul > li::before {
