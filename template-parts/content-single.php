@@ -28,7 +28,7 @@
 		</div>
 		
 		<!-- tags -->
-        <div class="mt-14 bg-[#f3f5fd] px-6 py-4 rounded">
+        <div class="post-tags-container mt-14 bg-[#f3f5fd] px-6 py-4 rounded">
           <p class="inline font-medium text-primary-700">Tags :</p>
           <?php
 

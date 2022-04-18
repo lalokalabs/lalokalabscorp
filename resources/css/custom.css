@@ -216,3 +216,22 @@ body {
 .cli-tab-footer .wt-cli-privacy-accept-btn {
     background: #320291;
 }
+
+/* wp job opening style */
+
+#awsm-application-submit-btn {
+    @apply px-3 py-1 text-white focus:outline-none rounded font-medium hover:cursor-pointer;
+    background-color: #17A8E3;
+}
+
+.single-awsm_job_openings .post-tags-container {
+    @apply hidden;
+}
+
+.prose .awsm-selectric-scroll  ul > li::before {
+    content: none;
+}
+
+.awsm-job-specification-term {
+    @apply border border-pink-200 bg-pink-100 rounded-full px-2;
+}
