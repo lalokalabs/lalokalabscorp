@@ -17,7 +17,9 @@
 
 	<header class="entry-header">
 		<?php the_title( sprintf( '<h1 class="entry-title text-3xl lg:text-4xl font-bold leading-tight mb-6"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-		<time datetime="<?php echo get_the_date( 'c' ); ?>" itemprop="datePublished" class="text-sm text-gray-700 mr-1"><?php echo get_the_date(); ?></time> <b>·</b> <span class="capitalize text-sm font-semibold text-gray-700 ml-1"><?php echo get_the_author_meta('display_name'); ?></span>
+		<div class="entry-header-meta">
+			<time datetime="<?php echo get_the_date( 'c' ); ?>" itemprop="datePublished" class="text-sm text-gray-700 mr-1"><?php echo get_the_date(); ?></time> <b>·</b> <span class="capitalize text-sm font-semibold text-gray-700 ml-1"><?php echo get_the_author_meta('display_name'); ?></span>
+		</div>
 	</header>
 
 	<hr class="my-8">
