@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Lalokalabs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-21 02:18+0000\n"
-"PO-Revision-Date: 2022-04-20 09:23+0000\n"
+"PO-Revision-Date: 2022-04-20 09:33+0000\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: product-card.php:24
 msgid "Learn More >"
-msgstr "Basikal"
+msgstr "もっと詳しく知る"
 
 #. Author of the theme
 msgid "Muhammad Fathur Rahman"
