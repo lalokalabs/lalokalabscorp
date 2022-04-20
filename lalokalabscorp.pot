@@ -16,20 +16,6 @@ msgstr ""
 "X-Loco-Version: 2.5.3; wp-5.8.1\n"
 "X-Domain: lalokalabscorp"
 
-#: front-page.php:59
-msgid "Awesome Products"
-msgstr ""
-
-#: front-page.php:62
-msgid ""
-"Here are some awesome products that we really think\n"
-"\t\t\tyou'll like."
-msgstr ""
-
-#: front-page.php:18
-msgid "Here are some cool things that we do at our lab."
-msgstr ""
-
 #. URI of the theme
 msgid "https://github.com/fathur-xoxzo/lalokalabscorp"
 msgstr ""
@@ -46,18 +32,10 @@ msgstr ""
 msgid "Lalokalabs Corporate Site."
 msgstr ""
 
-#: front-page.php:103
-msgid "Latest from our Blog"
-msgstr ""
-
 #. Author of the theme
 msgid "Muhammad Fathur Rahman"
 msgstr ""
 
-#. Name of the template
-msgid "Team Template"
-msgstr ""
-
-#: front-page.php:15
-msgid "What we do"
+#: product-card.php:24
+msgid "Learn More >"
 msgstr ""
