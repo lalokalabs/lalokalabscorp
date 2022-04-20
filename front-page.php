@@ -10,11 +10,9 @@
 		<!-- end transparent logo -->
 
 		<div class="text-center md:text-left mb-16 lg:w-1/2 ">
-			<h1 class="text-4xl sm:text-5xl text-cool-gray-700 font-bold mb-2"><span style="color: #ff8031;">T</span>he <span style="color: #e40074;">C</span>razy <span style="color: #6071ff;">L</span>abs</h1>
+			<h1 class="text-4xl sm:text-5xl text-cool-gray-700 font-bold mb-2"><?php the_field('hero_title'); ?></h1>
 			<h2 class="text-base font-medium text-cool-gray-600 leading-7">
-				We build software to help people save time, money
-				<br class="hidden sm:block">
-				and make them happier human beings
+				<?php the_field('hero_subtitle'); ?>
 			</h2>
 		</div>
 
@@ -66,10 +64,10 @@
 
 		<div class="mb-10 text-center">
 			<h2 class="mb-3 text-3xl sm:text-4xl font-bold">
-				<?php _e( 'Our Current Projects', 'lalokalabscorp' ); ?>
+				<?php the_field('project_section_title'); ?>
 			</h2>
 			<p class="text-cool-gray-600 font-medium">
-				<?php _e( "What we’re currently working on in the labs", 'lalokalabscorp' ); ?>
+				<?php the_field('project_section_subtitle'); ?>
 			</p>
 
 		</div>
@@ -105,15 +103,11 @@
 	<div class="container px-4 lg:px-14 mx-auto py-20 md:py-24">
 
 		<h2 class="text-3xl sm:text-4xl font-bold text-cool-gray-700 mb-2">
-			<?php _e( 'Meet The Team', 'lalokalabscorp' ); ?>
+			<?php the_field('team_section_title'); ?>
 		</h2>
 
 		<div class="text-base font-medium text-cool-gray-600 mb-10 leading-7">
-			The Labmates are a remote-first team living and working for many years from different parts of the planet.
-			We
-			communicate, take responsibility for our own roles, and contribute to keeping a beautiful harmony among us.
-			Our glue is
-			our love for technology and its ability to empower.
+			<?php the_field('team_section_subtitle'); ?>
 		</div>
 
 		<div class="flex flex-wrap -mb-8 -mx-4">
