@@ -72,7 +72,7 @@
 
 		</div>
 
-		<div class="flex flex-row flex-wrap justify-center lg:space-x-8 space-y-8 lg:space-y-0 lg:mb-8">
+		<div class="flex flex-row flex-wrap justify-center -mb-8 -mx-4">
 			<?php
 					$product_query = new WP_Query( array( 'post_type' => 'lab_products', 'posts_per_page' => 3, )); 
 				?>
@@ -83,7 +83,7 @@
 					$product_query->the_post();
 				?>
 
-			<div class="w-full max-w-sm sm:w-96">
+			<div class="w-full md:w-1/2 xl:w-1/3 mb-8 px-4">
 
 				<?php get_template_part( 'template-parts/product', 'card' ); ?>
 
