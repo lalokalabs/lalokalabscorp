@@ -232,6 +232,10 @@ body {
     @apply hidden;
 }
 
+.awsm-jobs-archive-title {
+    @apply text-3xl font-bold mb-8;
+}
+
 .awsm-job-form h2 {
     margin: .5rem 0 2rem;
 }
