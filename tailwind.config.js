@@ -13,6 +13,7 @@ module.exports = {
             './safelist.txt'
         ],
         safelist: [
+            'overflow-y-auto',
             'list-inside',
             'list-disc',
             'list-decimal',
