@@ -42,25 +42,41 @@
 
 	<!-- post list -->
 
-	<div class="container mx-auto flex pt-12 pb-20 px-4 lg:px-14">
+	<div class="container mx-auto pt-12 pb-20 px-4 lg:px-14">
 
-		<div class="flex flex-wrap -mb-16 -mx-4">
-			<?php if ( have_posts() ) : ?>
-				<?php
-				while ( have_posts() ) :
-					the_post();
-					?>
+		<?php if ( have_posts() ) : ?>
 
-					<div class="w-full sm:w-1/2 lg:w-1/3 mb-16 px-4">
+			<div class="flex flex-wrap -mb-16 -mx-4">
+				
+					<?php
+					while ( have_posts() ) :
+						the_post();
+						?>
 
-					<?php get_template_part( 'template-parts/content', 'card' ); ?>
+						<div class="w-full sm:w-1/2 lg:w-1/3 mb-16 px-4">
 
-					</div>
+						<?php get_template_part( 'template-parts/content', 'card' ); ?>
 
-				<?php endwhile; ?>
+						</div>
 
-			<?php endif; ?>
-		</div>
+					<?php endwhile; ?>
+
+				
+			</div>
+
+			<!-- pagination -->
+
+
+
+			<div class="mt-4">
+				<div class="nav-previous alignleft font-semibold hover:underline text-purple-800"><?php previous_posts_link( 'Prev' ); ?></div>
+				<div class="nav-next alignright font-semibold hover:underline text-purple-800"><?php next_posts_link( 'Next' ); ?></div>
+			</div>
+
+			<!-- end pagination -->
+
+		<?php endif; ?>
+
 
 	</div>
 
