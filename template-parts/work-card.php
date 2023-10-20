@@ -1,4 +1,4 @@
-<div class="border shadow-sm rounded p-8 h-full" style="background-color: rgba(255, 255, 255, 0.85);">
+<div class="border shadow-sm rounded p-8 h-full bg-white-transparent">
     <div class="flex flex-col">
         <div class="mb-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" style="color: <?php echo $args['icon_color']; ?>;" viewBox="0 0 20 20" fill="currentColor">
