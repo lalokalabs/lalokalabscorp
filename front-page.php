@@ -135,7 +135,7 @@
 				<?php the_field('cta_section_title'); ?>
 			</h2>
 
-			<p class="text-cool-gray-600 font-medium">
+			<p class="text-cool-gray-600 text-center font-medium">
 				<?php the_field('cta_section_subtitle'); ?>
 			</p>
 
